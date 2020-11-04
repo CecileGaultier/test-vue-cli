@@ -2,7 +2,7 @@
     <div id="app">
         <div class="dialog-window" v-show="visible">
             <header>
-                <h1>Le titre</h1>
+                <h1>{{titre}}</h1>
             </header>
             <div class="main">
                 Contenu
@@ -21,6 +21,10 @@
             initialVisible:{
                 type:Boolean,
                 default:false,
+            },
+            titre:{
+               type: String,
+                default: "Le titre par défaut",
             }
         },
         data:function () {
