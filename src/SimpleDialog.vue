@@ -18,7 +18,11 @@
     export default {
         name: 'SimpleDialog',
         props: {
-            visible: {}
+        },
+        data:function () {
+            return{
+                visible:false,
+            }
         }
     }
 </script>
