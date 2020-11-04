@@ -23,6 +23,11 @@
             return{
                 visible:false,
             }
+        },
+        methods:{
+            show(){
+                this.visible=true;
+            }
         }
     }
 </script>
