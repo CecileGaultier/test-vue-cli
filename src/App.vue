@@ -1,5 +1,10 @@
 <template>
-  <SimpleDialog :visible="visible"/>
+  <div class="app">
+    <button @click="$refs.dialog.visible=true">Open</button>
+
+    <SimpleDialog ref="dialog"/>
+
+  </div>
 </template>
 
 <script>
@@ -13,7 +18,7 @@
   },
   data: function () {
     return{
-      visible:false,
+      //plus de données
     }
   },
 }
