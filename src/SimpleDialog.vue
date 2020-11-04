@@ -5,7 +5,7 @@
                 <h1>{{titre}}</h1>
             </header>
             <div class="main">
-                Contenu
+                <slot/>
             </div>
             <footer>
                 <button @click="visible=false">Close</button>
