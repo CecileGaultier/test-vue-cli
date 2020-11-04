@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <button>Open</button>
+    <button @click="visible=true">Open</button>
 
     <div class="dialog-window" v-show="visible">
       <header>
@@ -10,7 +10,7 @@
         Contenu
       </div>
       <footer>
-        <button >Close</button>
+        <button @click="visible=false">Close</button>
       </footer>
     </div>
 
