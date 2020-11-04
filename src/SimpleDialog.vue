@@ -18,10 +18,14 @@
     export default {
         name: 'SimpleDialog',
         props: {
+            initialVisible:{
+                type:Boolean,
+                default:false,
+            }
         },
         data:function () {
             return{
-                visible:false,
+                visible:this.initialVisible,
             }
         },
         methods:{

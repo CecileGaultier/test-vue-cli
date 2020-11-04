@@ -2,7 +2,7 @@
   <div class="app">
     <button @click="$refs.dialog.show()">Open</button>
 
-    <SimpleDialog ref="dialog"/>
+    <SimpleDialog ref="dialog" :initial-visible="true"/>
 
   </div>
 </template>
