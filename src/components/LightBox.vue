@@ -1,15 +1,8 @@
 <template>
     <div class="light-box">
         <ul>
-            <li><img src="images/thumbnails/animals-2.jpeg" @click="afficheImg('images/animals-2.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-1.jpeg" @click="afficheImg('images/animals-1.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-3.jpeg" @click="afficheImg('images/animals-3.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-4.jpeg" @click="afficheImg('images/animals-4.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-5.jpeg" @click="afficheImg('images/animals-5.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-6.jpeg" @click="afficheImg('images/animals-6.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-7.jpeg" @click="afficheImg('images/animals-7.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-8.jpeg" @click="afficheImg('images/animals-8.jpeg')" alt=""/></li>
-            <li><img src="images/thumbnails/animals-9.jpeg" @click="afficheImg('images/animals-9.jpeg')" alt=""/></li>
+            <li v-for="{src, dataFullImg} in imageData" :key="src">
+                <img :src="src" @click="afficheImg(dataFullImg)" alt=""/></li>
         </ul>
 
         <SimpleDialog ref="dialog"
@@ -35,6 +28,44 @@
     data: function () {
         return{
             imageCourante: "",
+            imageData:[
+                {
+                    "src": "images/thumbnails/animals-1.jpeg",
+                    "dataFullImg": "images/animals-1.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-2.jpeg",
+                    "dataFullImg": "images/animals-2.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-3.jpeg",
+                    "dataFullImg": "images/animals-3.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-4.jpeg",
+                    "dataFullImg": "images/animals-4.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-5.jpeg",
+                    "dataFullImg": "images/animals-5.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-6.jpeg",
+                    "dataFullImg": "images/animals-6.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-7.jpeg",
+                    "dataFullImg": "images/animals-7.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-8.jpeg",
+                    "dataFullImg": "images/animals-8.jpeg"
+                },
+                {
+                    "src": "images/thumbnails/animals-9.jpeg",
+                    "dataFullImg": "images/animals-9.jpeg"
+                }
+            ],
         }
     },
 
