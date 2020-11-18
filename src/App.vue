@@ -1,7 +1,7 @@
 <template>
   <div class="app">
       <h1>Bonjour</h1>
-    <light-box/>
+    <LightBox initial-images-data="images-data.json" />
 
 
   </div>
