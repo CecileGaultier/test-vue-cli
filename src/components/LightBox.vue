@@ -32,13 +32,20 @@
         }
     },
         created(){
-            fetch(this.initialImageData)
-                .then(rep =>rep.json())
-                .then(json=>this.imageData =json)
+            if (typeof this.initialImageData === 'string'){
+                fetch(this.initialImageData)
+                    .then(rep =>rep.json())
+                    .then(json=>this.imageData =json);
+            }
+            else{
+                this.imageData = this.initialImageData;
+            }
+
         },
 
         props: {
             initialImageData:{
+                type: [String,Array],
                 default:"images-data.json",
             }
         },

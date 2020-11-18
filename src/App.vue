@@ -1,7 +1,7 @@
 <template>
   <div class="app">
       <h1>Bonjour</h1>
-    <LightBox initial-images-data="images-data.json" />
+    <LightBox :initial-images-data="imageData" />
 
 
   </div>
@@ -13,12 +13,48 @@
 
   export default {
   name: 'App',
-  components: {
-    LightBox
-  },
+  components: {LightBox},
   data: function () {
     return{
-      //plus de données
+      imageData:[
+          {
+              "src": "images/thumbnails/animals-1.jpeg",
+              "dataFullImg": "images/animals-1.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-2.jpeg",
+              "dataFullImg": "images/animals-2.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-3.jpeg",
+              "dataFullImg": "images/animals-3.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-4.jpeg",
+              "dataFullImg": "images/animals-4.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-5.jpeg",
+              "dataFullImg": "images/animals-5.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-6.jpeg",
+              "dataFullImg": "images/animals-6.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-7.jpeg",
+              "dataFullImg": "images/animals-7.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-8.jpeg",
+              "dataFullImg": "images/animals-8.jpeg"
+          },
+          {
+              "src": "images/thumbnails/animals-9.jpeg",
+              "dataFullImg": "images/animals-9.jpeg"
+          }
+      ]
+
     }
   },
 }
