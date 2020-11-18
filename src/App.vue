@@ -1,23 +1,20 @@
 <template>
   <div class="app">
-    <button @click="$refs.dialog.show()">Open</button>
+      <h1>Bonjour</h1>
+    <light-box/>
 
-    <SimpleDialog ref="dialog"
-                  initial-visible titre="Le titre de cette instance">
-      Contenu s'affiche dans ...
-    </SimpleDialog>
 
   </div>
 </template>
 
 <script>
 
-  import SimpleDialog from "@/SimpleDialog";
+  import LightBox from "@/components/LightBox";
 
   export default {
   name: 'App',
   components: {
-    SimpleDialog
+    LightBox
   },
   data: function () {
     return{
