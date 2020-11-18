@@ -32,9 +32,15 @@
         }
     },
         created(){
-            fetch("images-data.json")
+            fetch(this.initialImageData)
                 .then(rep =>rep.json())
                 .then(json=>this.imageData =json)
+        },
+
+        props: {
+            initialImageData:{
+                default:"images-data.json",
+            }
         },
 
     methods:{
