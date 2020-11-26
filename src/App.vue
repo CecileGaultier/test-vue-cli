@@ -75,12 +75,16 @@
               "title": "chien",
               "type": "domestique",
           }],
-        filtreType: "",
+        filtreType: null,
     }
     },
       computed:{
         imageDataFiltree(){
-            return this.imageData.filter(({type})=>type===this.filtreType);
+            if (this.filtreType){
+                return this.imageData.filter(({type})=>type===this.filtreType);
+            } else {
+                return this.imageData;
+            }
         }
       }
 }
