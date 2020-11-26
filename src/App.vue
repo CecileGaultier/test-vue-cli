@@ -1,8 +1,8 @@
 <template>
   <div class="app">
       <h1>Bonjour</h1>
-      <button @click="filtreType='domestique'">domestique</button>
-      <button @click="filtreType='sauvage'">sauvage</button>
+      <button @click="filtreType=null">tous</button>
+      <button v-for="type of listeFiltresType" :key="type" @click="filtreType=type">{{type}}</button>
 
       <LightBox :image-data="imageDataFiltree" />
 
@@ -49,7 +49,7 @@
               "src": "images/thumbnails/animals-5.jpeg",
               "dataFullImg": "images/animals-5.jpeg",
               "title": "chat",
-              "type": "domestique",
+              "type": "domestique canapé",
           },
           {
               "src": "images/thumbnails/animals-6.jpeg",
@@ -85,7 +85,10 @@
             } else {
                 return this.imageData;
             }
-        }
+        },
+          listeFiltresType(){
+            return new Set(this.imageData.map(o=>o.type))
+          }
       }
 }
 </script>
