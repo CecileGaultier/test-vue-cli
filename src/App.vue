@@ -71,12 +71,13 @@
               "dataFullImg": "images/animals-9.jpeg",
               "title": "chien",
               "type": "domestique",
-          }]
+          }],
+        filtreType: "domestique",
     }
     },
       computed:{
         imageDataFiltree(){
-            return this.imageData.filter(({type})=>type==="sauvage");
+            return this.imageData.filter(({type})=>type===this.filtreType);
         }
       }
 }
