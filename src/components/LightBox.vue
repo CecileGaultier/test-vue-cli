@@ -1,5 +1,5 @@
 <template>
-    <div class="light-box">
+    <div class="light-box list-move">
         <transition-group name="list" tag="ul">
             <li v-for="{src, dataFullImg,title} in imageData" :key="src">
                 <img :src="src" :title="title" @click="afficheImg(dataFullImg,title)" alt=""/></li>
@@ -49,5 +49,7 @@
 </script>
 
 <style scoped>
-
+    .list-move {
+        transition: transform 1s;
+    }
 </style>

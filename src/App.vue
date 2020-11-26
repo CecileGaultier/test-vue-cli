@@ -12,6 +12,7 @@
   </div>
 </template>
 
+
 <script>
 
   import LightBox from "@/components/LightBox";
@@ -128,11 +129,24 @@
     },
       computed:{
           imageDataFiltree(){
+              let data = [...this.imageData];
             if (this.filtreType){
-                return this.imageData.filter(({type})=>type===this.filtreType);
-            } else {
-                return this.imageData;
+                data = data.filter(({type})=>type===this.filtreType);
             }
+
+            if (this.filtreNomTri){
+                data.sort((a,b)=>a.tris.age - b.tris.age);
+            }
+
+            if (this.filtreNomTri){
+                  data.sort((a,b)=>a.tris.taille - b.tris.taille);
+            }
+
+            if (this.filtreNomTri){
+                  data.sort((a,b)=>a.tris.poids - b.tris.poids);
+             }
+
+            return data;
         },
           listeFiltresType(){
             return new Set(this.imageData.map(o=>o.type))
