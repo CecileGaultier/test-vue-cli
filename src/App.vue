@@ -1,7 +1,10 @@
 <template>
   <div class="app">
       <h1>Bonjour</h1>
-    <LightBox :image-data="imageDataFiltree" />
+      <button @click="filtreType='domestique'">domestique</button>
+      <button @click="filtreType='sauvage'">sauvage</button>
+
+      <LightBox :image-data="imageDataFiltree" />
 
 
   </div>
@@ -72,7 +75,7 @@
               "title": "chien",
               "type": "domestique",
           }],
-        filtreType: "domestique",
+        filtreType: "",
     }
     },
       computed:{
